@@ -1,0 +1,52 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+
+mua_control_dev.name=SparkFun SAMD51 MUA Pruebas
+mua_control_dev.vid.0=0x1B4F
+mua_control_dev.pid.0=0x0020
+mua_control_dev.vid.1=0x1B4F
+mua_control_dev.pid.1=0xF020
+mua_control_dev.upload.tool=bossac18
+mua_control_dev.upload.protocol=sam-ba
+mua_control_dev.upload.maximum_size=507904
+mua_control_dev.upload.maximum_data_size=262144
+mua_control_dev.upload.offset=0x4000
+mua_control_dev.upload.use_1200bps_touch=true
+mua_control_dev.upload.wait_for_upload_port=true
+mua_control_dev.upload.native_usb=true
+mua_control_dev.build.mcu=cortex-m4
+mua_control_dev.build.f_cpu=120000000L
+mua_control_dev.build.usb_product="SparkFun SAMD51 MUA Pruebas"
+mua_control_dev.build.usb_manufacturer="SparkFun Electronics"
+mua_control_dev.build.board=SAMD51_MUA_PRUEBAS
+mua_control_dev.build.core=sparkfun:SparkFun_SAMD51_MicroMod
+mua_control_dev.build.extra_flags=-D__SAMD51J20A__ -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+mua_control_dev.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+mua_control_dev.build.openocdscript=openocd_scripts/arduino_zero.cfg
+mua_control_dev.build.variant=SparkFun_SAMD51_MUA_Pruebas
+mua_control_dev.build.variant_system_lib=
+mua_control_dev.build.vid=0x1B4F
+mua_control_dev.build.pid=0xF020
+mua_control_dev.bootloader.tool=openocd
+mua_control_dev.compiler.arm.cmsis.ldflags="-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+mua_control_dev.menu.cache.on=Enabled
+mua_control_dev.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+mua_control_dev.menu.cache.off=Disabled
+mua_control_dev.menu.cache.off.build.cache_flags=
+mua_control_dev.bootloader.file=SAMD51/bootloader-sparkfun-samd51-micromod-v3.4.0-65-gdf89a1f-dirty.bin
+
