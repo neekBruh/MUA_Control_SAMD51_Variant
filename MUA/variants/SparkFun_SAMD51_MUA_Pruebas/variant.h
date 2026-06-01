@@ -202,7 +202,12 @@ static const uint8_t SCK1  = PIN_SPI1_SCK ;
 #define PIN_QSPI_D3           (16u)   // PA11
 
 #define PIN_QSPI_SCK          (17u)   // PB10
-#define PIN_QSPI_CS           (18u)   // PB10
+#define PIN_QSPI_CS           (18u)   // PB11
+
+#define PIN_QSPI_IO0 PIN_QSPI_D0
+#define PIN_QSPI_IO1 PIN_QSPI_D1
+#define PIN_QSPI_IO2 PIN_QSPI_D2
+#define PIN_QSPI_IO3 PIN_QSPI_D3
 
 #define EXTERNAL_FLASH_DEVICE MT25QL01GBBB // Memoria FLASH externa de la placa de desarrollo MUA_Control FINAL
 #define EXTERNAL_FLASH_USE_QSPI
@@ -214,7 +219,7 @@ static const uint8_t SCK1  = PIN_SPI1_SCK ;
 
 // Wire Interfaces
 //-------------------------------------------
-#define WIRE_INTERFACES_COUNT 2
+#define WIRE_INTERFACES_COUNT 1
 
 // I2C
 #define PIN_WIRE_SDA         (23u)  // PA12
